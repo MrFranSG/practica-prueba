@@ -25,7 +25,7 @@ const registrar = ()=>{
         alert("Se ha registrado.")
         cargarDatos();
         }).catch((error)=>(
-            console.log(error)
+        console.log(error)
     ));
 
     
