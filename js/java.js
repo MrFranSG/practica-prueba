@@ -33,11 +33,11 @@ const registrar = ()=>{
 
 const cargarDatos = ()=>{
     ObtenerP().then((practica)=> {
-        console.log("hey");
+        console.log("c:");
         console.log(practica)
 
         let estructura = ""
-        practica.foreach((p)=>{
+        practica.forEach((p)=>{
             estructura += "<tr>"
             estructura += "<td>"+p.nombre+"<td>"
             estructura += "<td>"+p.apellido+"<td>"
