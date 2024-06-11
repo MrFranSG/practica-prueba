@@ -7,27 +7,6 @@ window.addEventListener("load", ()=>{
 
 })
 
-let fontSize = 16;
-const maxFontSize= 24;
-const minFontSize = 12; 
-
-function AumentarFuente() {
-    if (fontSize < maxFontSize){
-        fontSize += 2;
-        document.body.style.fontSize + 'px';
-    }
-}
-function DisminuirFuente() {
-    if (fontSize >minFontSize) {
-        fontSize -= 2;
-        document.body.style.fontSize = fontSize + 'px';
-    }
-}
-
-function CambiarContraste() {
-    document.body.classList.toggle('high-contrast');
-}
-
 const registrar = ()=>{
     let fNombre = document.getElementById("nombre");
     let fApellido = document.getElementById("apellido");

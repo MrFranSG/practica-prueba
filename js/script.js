@@ -31,18 +31,15 @@ function CambiarContraste() {
     }
 }
 
-function AumentarFuente() {
-    let estilos = document.getElementsByTagName('html')[0].style;
-    let tamañoActual = parseFloat(estilos.fontSize) || 16; 
-    let nuevoTamaño = tamañoActual + 2; 
+let currentFontSize = 16;
+const maxFontSize = 24;
+const minFontSize = 12;
 
-    estilos.fontSize = nuevoTamaño + 'px';
-}
-
-function DisminuirFuente() {
-    let estilos = document.getElementsByTagName('html')[0].style;
-    let tamañoActual = parseFloat(estilos.fontSize) || 16; 
-    let nuevoTamaño = tamañoActual - 2; 
-
-    estilos.fontSize = nuevoTamaño + 'px';
+function adjustFontSize(action) {
+    if (action === 'increase' && currentFontSize < maxFontSize) {
+        currentFontSize += 2;
+    } else if (action === 'decrease' && currentFontSize > minFontSize) {
+        currentFontSize -= 2;
+    }
+    document.body.style.fontSize = currentFontSize + 'px';
 }
