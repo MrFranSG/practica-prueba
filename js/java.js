@@ -7,6 +7,27 @@ window.addEventListener("load", ()=>{
 
 })
 
+let fontSize = 16;
+const maxFontSize= 24;
+const minFontSize = 12; 
+
+function AumentarFuente() {
+    if (fontSize < maxFontSize){
+        fontSize += 2;
+        document.body.style.fontSize + 'px';
+    }
+}
+function DisminuirFuente() {
+    if (fontSize >minFontSize) {
+        fontSize -= 2;
+        document.body.style.fontSize = fontSize + 'px';
+    }
+}
+
+function CambiarContraste() {
+    document.body.classList.toggle('high-contrast');
+}
+
 const registrar = ()=>{
     let fNombre = document.getElementById("nombre");
     let fApellido = document.getElementById("apellido");
@@ -32,12 +53,12 @@ const registrar = ()=>{
 }
 
 const cargarDatos = ()=>{
-    ObtenerP().then((practica)=> {
+    ObtenerP().then((personas)=> {
         console.log("c:");
-        console.log(practica)
+        console.log(personas)
 
         let estructura = ""
-        practica.forEach((p)=>{
+        personas.forEach((p)=>{
             estructura += "<tr>"
             estructura += "<td>"+p.nombre+"<td>"
             estructura += "<td>"+p.apellido+"<td>"
@@ -50,7 +71,7 @@ const cargarDatos = ()=>{
             estructura += "</tr>";
         })
         document.getElementById("cuerpotabla").innerHTML = estructura;
-        practica.forEach((p)=>{
+        personas.forEach((p)=>{
             let elemento = document.getElementById("UPD"+p.id);
             elemento.addEventListener("click",()=>{
                 document.getElementById("UPDnombre").value = p.nombre;

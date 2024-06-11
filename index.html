@@ -4,8 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Si</title>
+    <script type="module" src="./js/firebase.js"></script>
+    <script type="module" src="./js/java.js"></script>
+    <link rel ="stylesheet" href="./css/styles.css">
+    <script src ="js/script.js"></script>
 </head>
 <body>
+    <header>
+        <h1>Cambios aplicables</h1>
+        <div id ="Accesibilidad">
+            <button onclick="AumentarFuente()">A+</button>
+            <button onclick="DisminuirFuente()">A-</button>
+            <button onclick="CambiarContraste()">Contraste</button>
+        </div>
+    </header>
     <input type="text" id="nombre" placeholder="Nombre">
     <input type="text" id="apellido" placeholder="Apellido">
     <input type="number" id="rut" placeholder="Rut">
@@ -13,6 +25,8 @@
     <input type="number" id="edad" placeholder="Edad">
     <input type="date" id="fnacimiento" placeholder="Fecha de nacimiento">
     <button id="btnRegistrar">Registrar</button>
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque at cum, eaque ducimus dicta enim adipisci tempora rem expedita in dolores eum consequatur perspiciatis obcaecati iusto molestias cumque dolore commodi.</p>
 
     <table>
         <thead>
@@ -37,7 +51,6 @@
     <input type = "number" id="UPDedad" placeholder="Edad">
     <input type = "date" id="UPDfnacimiento" placeholder="Fecha de nacimiento">
     <button id = "btnActualizar">Actualizar</button>
-
 
 
 

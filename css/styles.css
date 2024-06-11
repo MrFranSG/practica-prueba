@@ -1,0 +1,22 @@
+body{
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    background-color: white;
+    color: black;
+    transition: all 0.3s;
+}
+
+.high-contrast{
+    background-color: black;
+    color: white;
+}
+
+#Accesibilidad{
+    margin-bottom: 20px;
+}
+
+#Accesibilidad button{
+    margin-right: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
